@@ -600,9 +600,6 @@ transition: slide-left
 
 Teks dipecah menjadi unit dasar (*token*) menggunakan algoritma tokenisasi sub-kata sebelum masuk Transformer.
 
-<div class="grid grid-cols-2 gap-6 mt-4">
-<div>
-
 ### 🔤 Byte Pair Encoding (BPE)
 Algoritma tokenisasi paling populer (GPT, LLaMA):
 * Dimulai dari **karakter individual**, lalu menggabungkan pasangan paling sering secara iteratif.
@@ -614,13 +611,22 @@ Algoritma tokenisasi paling populer (GPT, LLaMA):
 | `"the"` | `["the"]` |
 | `"unhappiness"` | `["un", "happiness"]` |
 
-</div>
+---
+transition: slide-left
+---
+
+# Tokenisasi: Sub-Kata & Positional Encoding
+
+<div class="grid grid-cols-2 gap-6 mt-6">
 <div>
 
 ### 🎯 Mengapa Sub-Kata?
 * **Efisien**: Kosakata terbatas (32K–100K) tetapi bisa merepresentasikan kata apa pun.
 * **Kata baru**: Dipecah menjadi sub-kata yang dikenali.
 * **Multibahasa**: Satu tokenizer untuk banyak bahasa.
+
+</div>
+<div>
 
 ### 🔢 Positional Encoding
 * Transformer memproses paralel → tidak tahu urutan kata.
